@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
       - name: wil-playground-cont
-        image: wil42/playground:v2
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
+      - name: port-forward
+        image: bitnami/kubectl
+        command: ["sudo", "kubectl", "port-forward", "svc/wil-playground", "8888:8888", "-n", "dev"]
