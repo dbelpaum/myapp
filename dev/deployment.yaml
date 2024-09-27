@@ -21,4 +21,4 @@ spec:
         - containerPort: 8888
       - name: port-forward
         image: bitnami/kubectl
-        command: ["sleep 30", "sudo", "kubectl", "port-forward", "svc/wil-playground", "8888:8888", "-n", "dev"]
+        command: ["sleep 30", ";", "sudo", "kubectl", "port-forward", "svc/wil-playground", "8888:8888", "-n", "dev"]
